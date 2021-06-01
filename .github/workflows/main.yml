@@ -27,4 +27,7 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run build
-      - run: npm test
+      - name: deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with: 
+          publish_dir: /build
